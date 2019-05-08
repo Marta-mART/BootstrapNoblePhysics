@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>      
+     <!-- Tytuł strony -->
+    <title>Nobliści z fizyki</title>
+
+     <!-- Kodowanie tekstu -->
+    <meta charset="utf-8">
+    
+     <!--Ustawienia początkowe na telefon i kompatybilność z Explorerem -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+     <!-- Bootstrap CSS - zaciągnięty z folderu node modules -->
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    
+    <!-- Podpięty mój CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<!-- Nawigacyjny pas na górze strony -->
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <!--Przycisk zamykający i otwierający menu, ale tylko w trybie na telefon -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Logo pomniejszone -->
+            <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="30"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <!--Lista podstron -->
+                <ul class="navbar-nav mr-auto">
+                   <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Strona główna</a></li>
+                   <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> Baza noblistów</a></li>
+                
+                   <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Kontakt</a></li>        
+                </ul>
+                <!--Przycisk logowania -->
+                <span class="navbar-text">
+                    <a id="loginButton">
+                        <span class="fa fa-sign-in"></span> Zaloguj się
+                    </a>
+                </span>
+            </div>
+            
+        </div>
+    </nav>
+
+    <!--Modal formularza subskrypcji -->
+    <div id="formModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <!--Nagłówek modala -->
+                    <div class="modal-header">
+                            <h4 class="modal-title">Subskrybuj nas!</h4>
+                            <button type="button" class="close" data-dismiss="modal">
+                                    &times;
+                            </button>
+                    </div>
+                    <!--Ciało modala -->
+                    <div class="modal-body">
+                        <!--Formularz-->
+                            <form>
+                                <!--Rząd 1 - wiek -->
+                                    <div class="form-group row">
+                                        <!-- Poszczególne labele i miejsca na wpisanie danych-->   
+                                        <label for="guestsnum" class="col-md-2" > <strong>Wiek</strong> </label>
+                                          
+                                        <div class="col-md-10">
+                                        
+                                                <div class="form-check form-check-inline">
+                                                     <input class="form-check-input" type="radio" id="inlineRadio1" name=inlineRadioOptions" value="option1" checked>
+                                                     <label class="form-check-label" for="inlineRadio1">10-20</label>
+                                                </div>
+    
+                                                <div class="form-check form-check-inline">
+                                                     <input class="form-check-input" type="radio" id="inlineRadio2" name=inlineRadioOptions" value="option2" checked>
+                                                     <label class="form-check-label" for="inlineRadio2">21-30</label>
+                                                </div>   
+                                                
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" id="inlineRadio3" name=inlineRadioOptions" value="option3" checked>
+                                                    <label class="form-check-label" for="inlineRadio3">31-40</label>
+                                                </div>
+    
+                                                <div class="form-check form-check-inline">
+                                                     <input class="form-check-input" type="radio" id="inlineRadio4" name=inlineRadioOptions" value="option4" checked>
+                                                     <label class="form-check-label" for="inlineRadio4">41-50</label>
+                                                </div>
+    
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" id="inlineRadio5" name=inlineRadioOptions" value="option5" checked>
+                                                    <label class="form-check-label" for="inlineRadio5">51-60</label>
+                                                </div>
+    
+                                                <div class="form-check form-check-inline">                                                              
+                                                    <input class="form-check-input" type="radio" id="inlineRadio6" name=inlineRadioOptions" value="option6" checked>
+                                                    <label class="form-check-label" for="inlineRadio6">61 i więcej</label>
+                                                 </div>
+                                        
+                                        </div>
+                                    </div>
+                                    <!--Rzad 2 - przyciski -->
+                                    <div class="form-group row">
+                                           
+                                            <label for="subnum" class="col-md-2 col-form-label"> <strong>Subskrypcja</strong> </label>
+
+                                            <div class="col-5 col-md-3 btn-group btn-group-toggle" data-toggle="buttons">
+                                                <!--Przyciski typu radio, ale wystylizowane -->
+                                                    <label class="btn btn-success active">                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> Codzienna
+                                                    </label>
+                                                    <label class="btn btn-warning">
+                                                      <input type="radio" name="options" id="option2" autocomplete="off"> Tygodniowa
+                                                    </label>
+                                            </div>
+
+                                    </div>
+                                     <!--Rząd 3 - input czas-->
+                                    <div class="form-group row">
+                                           
+                                            <label for="date" class="col-md-2 col-form-label"><strong>Preferowany czas wysyłania maili</strong></label>
+                                              
+                                            <div class="col-5 col-md-3">
+                                                    <input type="text" class="form-control date" name="date" placeholder="Data">
+                                            </div>   
+    
+                                            <div class="col-5 col-md-3">
+                                                    <input type="text" class="form-control time" name="time" placeholder="Czas">
+                                            </div>   
+    
+                                            
+                                    </div>
+                                    <!-- Rząd 4 - przyciski potwierdzające subskrypcję-->
+                                    <div class="form-group row">
+                                            <div class="offset-md-2 col-md-10">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+                                                <button type="submit" class="btn btn-primary">Potwierdź</button>
+                                            </div>
+                                    </div>
+                            </form>
+                    </div>
+                </div>
+                
+            </div>
+    </div>
+
+    <!--Modal logowania -->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <!--Nagłowek modalu -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Zaloguj</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <!--Ciało modalu -->
+                <div class="modal-body">
+                    <!--Formularz -->
+                        <form>
+                                <div class="form-row">
+                                    <div class="form-group col-sm-4">
+                                            <label class="sr-only" for="exampleInputEmail3">E-mail</label>
+                                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="E-mail">
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <label class="sr-only" for="exampleInputPassword3">Hasło</label>
+                                        <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Hasło">
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label"> Zapamiętaj mnie
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Anuluj</button>
+                                    <button type="submit" class="btn btn-primary btn-sm ml-1">Zaloguj się</button>        
+                                </div>
+                            </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Nagłówek typu jumbotron -->
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <!--Krótki opis i przycisk subskrypcji -->
+                <div class="col-12 col-sm-6">
+                    <h1>Nobliści z fizyki</h1>
+                    <p>Strona poświęcona Noblistom z fizyki - kompendium wiedzy. Baza Noblistów w rozbudowie.</p>
+                    <a role="button" class="btn btn-warning nav-link btn-block" id="reserveButton"> Subskrybuj nas! </a>
+                </div>
+                <!--Kolumna z resztą miejsca na obrazek -->
+                <div class="col-12 col-sm align-self-center">
+                        <img  height="80%" width="80%" src="img/logo.jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Kontener główny zawierający stronę i treści -->
+    <div class="container">
+        <div class="row row-content">
+            <div class="col">
+                <!--Karuzela ze zdjęciami -->
+                    <div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="2000" pause="hover">
+                    <div class="carousel-inner" role="listbox">
+                        <!--1 obraz -->
+                            <div class="carousel-item active">
+                                <img class="d-block img-fluid "
+                                    src="img/2018.jpg" alt="2018">
+                                <div class="carousel-caption">
+                                    <h2> <span class="badge badge-warning">Trzech laureatów 2018: Gérard Mourou, Arthur Ashkin i Donna Strickland
+                                       </span></h2>
+                                </div>
+                        </div>
+                        <!--2 obraz -->
+                        <div class="carousel-item">
+                                <img class="d-block img-fluid"
+                                src="img/2017.jpg" alt="2017">
+                                <div class="carousel-caption">
+                                    <h2><span class="badge badge-warning">Trzech laureatów 2017: Rainer Weiss, Barry C. Barish i Kip</span></h2>
+                                </div>                                
+                        </div>
+                        <!--3 obraz -->
+                        <div class="carousel-item">
+                                <img class="d-block img-fluid"
+                                src="img/2016.jpg" alt="2016">
+                                <div class="carousel-caption">
+                                    <h2><span class="badge badge-warning">Trzech laureatów 2016: David J. Thouless,	Duncan Haldane i John M. Kosterlitz</span></h2>
+                                </div>     
+                        </div>
+                    </div>
+                    <!--Na dole informacja, który slajd jest wyświetlany-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active">      </li>
+                        <li data-target="#mycarousel" data-slide-to="1">                  </li>
+                        <li data-target="#mycarousel" data-slide-to="2">                </li>
+                    </ol>
+                     <!--Przycisk poprzeni slajd-->
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <!--Przycisk następny slajd-->
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                    </a>
+                   <!--Przycisk pausowania slajdów-->
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span class="fa fa-pause"></span>
+                    </button>
+                   
+                </div>
+            </div>
+        </div>
+
+        <!--1 informacja - urywek wpisu -->
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                <h3>3 kobiety - zdobywczynie Nobla z fizyki</h3>
+            </div>
+            <div class="col col-sm order-sm-first col-md">
+                <div class="media">
+                    <img class="d-flex- mr-3 img-thumbnail align-self-center" src="img/kobiety.jpg" width="50%" alt="Kobiety">
+                    <div class="media-body">
+                            <h2 class="mt-0">Noblistki <span class="badge badge-danger">Gorące info</span> </h2>
+                                <span class="badge badge-pill badge-secondary">Maria Curie, Maria Goeppert-Mayer i Donna Strickland </span>
+                            <p class="d-none d-sm-block">Profesor fizyki Waterloo, Donna Strickland, stała się jedną z trzech kobiet,
+                                 które dostały Nagrodę Nobla w dziedzinie fizyki, ostatnią kobietą, która zdobyła tę prestiżową nagrodę w 1963 roku
+                                  za badania w zastosowaniach przemysłowych i medycznych. Dzięki jej transformacyjnym badaniom stała się również pionierką kobiet w nauce.</p>
+                    </div>                      
+                </div>                
+            </div>
+        </div>
+
+         <!--2 informacja - urywek wpisu -->
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 col-md-3">
+                <h3>Nagroda Nobla 2017 - Odkrycie fal grawitacyjnych</h3>
+            </div>
+            <div class="col col-sm col-md">
+                    <div class="media">
+                            <div class="media-body">
+                                    <h2>Fale grawitacyjne<span class="badge badge-danger">A to ciekawe!</span> </h2>
+                                    <p>Fale grawitacyjne zostały przewidziane w 1915 r. przez laureata Nagrody Nobla - Alberta Einsteina w jego ogólnej teorii względności.
+                                         W swoim modelu matematycznym Einstein połączył przestrzeń i czas w kontinuum, które nazwał „czasoprzestrzenią”.
+                                         To stąd pochodzi wyrażenie „zmarszczki w czasoprzestrzeni” dla fal grawitacyjnych.</p>
+                            </div>
+                            <img class="d-flex- ml-3 img-thumbnail align-self-center" src="img/grawitacja.jpg" alt="grawitacja" width="50%">
+                    </div>               
+            </div>
+        </div>
+
+        <!--3 informacja - urywek wpisu -->
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                <h3>Nagroda Nobla za 2015 r.</h3>
+            </div>
+            <div class="col col-sm order-sm-first col-md">
+                <div class="media">
+                    <img class="d-felx mr-3 img-thumbnail align-self-center" src="img/2015.jpg" alt="2015" width="50%">
+                    <div class="media-body">
+                         <h2 class="mt-0">Takaaki Kajita i Arthur B. McDonald</h2>
+                          <p>Japoński naukowiec Takaaki Kajita i kanadyjski badacz Arthur B. McDonald
+                                podzielą się nagrodą za odkrycie,
+                               że neutrina - podstawowe cząstki, które występują w trzech rodzajach lub stanach
+                                - mogą faktycznie wymieniać tożsamości i zmieniać stany podczas lotu w przestrzeni kosmicznej. </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Karta na dole strony - zapisy -->
+        <div class="row row-content align-items-center">
+                <div class="col-12 col-sm-2"></div>
+                <div class="col-12 col-sm-8">
+                        <!--Karta - div  -->
+                        <div class="card" id="guestform">
+                                <h3 class="card-header bg-warning text-white">Zapisz się na debatę we Wrocławiu</h3>
+                                <div class="card-body">
+                                        <!--Formularz zapisowy -->
+                                        <form>
+                                                <div class="form-group row">
+                                                       
+                                                    <label for="guestsnum" class="col-md-2" > <strong>Ile osób</strong> </label>
+                                                      
+                                                    <div class="col-md-10">
+                                                    
+                                                            <div class="form-check form-check-inline">
+                                                                 <input class="form-check-input" type="radio" id="inlineRadio1" name=inlineRadioOptions" value="option1" checked>
+                                                                 <label class="form-check-label" for="inlineRadio1">1</label>
+                                                            </div>
+
+                                                            <div class="form-check form-check-inline">
+                                                                 <input class="form-check-input" type="radio" id="inlineRadio2" name=inlineRadioOptions" value="option2" checked>
+                                                                 <label class="form-check-label" for="inlineRadio2">2</label>
+                                                            </div>   
+                                                            
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" id="inlineRadio3" name=inlineRadioOptions" value="option3" checked>
+                                                                <label class="form-check-label" for="inlineRadio3">3</label>
+                                                            </div>
+
+                                                            <div class="form-check form-check-inline">
+                                                                 <input class="form-check-input" type="radio" id="inlineRadio4" name=inlineRadioOptions" value="option4" checked>
+                                                                 <label class="form-check-label" for="inlineRadio4">4</label>
+                                                            </div>
+
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" id="inlineRadio5" name=inlineRadioOptions" value="option5" checked>
+                                                                <label class="form-check-label" for="inlineRadio5">5</label>
+                                                            </div>
+
+                                                            <div class="form-check form-check-inline">                                                              
+                                                                <input class="form-check-input" type="radio" id="inlineRadio6" name=inlineRadioOptions" value="option6" checked>
+                                                                <label class="form-check-label" for="inlineRadio6">6</label>
+                                                             </div>
+                                                    
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group row">
+                                                       
+                                                        <label for="date" class="col-md-2 col-form-label"><strong>Data i godzina</strong></label>
+                                                          
+                                                        <div class="col-5 col-md-3">
+                                                                <input type="text" class="form-control date" name="date" placeholder="Data">
+                                                        </div>   
+
+                                                        <div class="col-5 col-md-3">
+                                                                <input type="text" class="form-control time" name="time" placeholder="Godzina">
+                                                        </div>   
+
+                                                        
+                                                </div>
+
+                                                <div class="form-group row">
+                                                        <div class="offset-md-2 col-md-10">
+                                                            <button type="submit" class="btn btn-primary">Zapisz się!</button>
+                                                        </div>
+                                                </div>
+                                        </form>
+
+                                        
+                                    </dl>
+                                </div>
+                            </div>
+                </div>  
+                <div class="col-12 col-sm-2"></div>
+        </div>
+
+    </div>
+
+    <!--Stopka -->
+    <footer class="footer">
+        <div class="container">
+            <div class = "row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <!--Linki do podstron -->
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Strona główna</a></li>
+                        <li><a href="./aboutus.html">Spis noblistów</a></li>
+                        <li><a href="./contactus.html">Kontakt</a></li>
+                    </ul>
+                </div>
+               <!--Informacje o firmie -->
+                <div class="col-7 col-sm-5">
+                    <h5>Nasza siedziba</h5>
+                    <address>
+		              Wrocław 50-789<br>
+		              ul. Czystajakaś 45/2<br>
+		              Polska<br>
+		              <i class="fa fa-phone fa-lg"></i>: 123 456 789<br>
+		              <i class="fa fa-fax fa-lg"></i>: 003 457 789<br>
+		              <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:fizykanoble@fizyka.net">fizykanoble@fizyka.net</a>
+		           </address>
+                </div>
+                <!--Social media -->
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
+                    </div>
+                </div>
+           </div>
+            <!--O autorze -->
+           <div  class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>Marta Głowacka - Kurs Kredek</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+
+         <!--Skrypty do działania JQuery  -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    
+
+</body>
+
+</html>

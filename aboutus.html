@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Tytuł strony -->
+    <title>Nobliści z fizyki</title>
+
+      <!-- Kodowanie tekstu -->
+    <meta charset="utf-8">
+     <!--Ustawienia początkowe na telefon i kompatybilność z Explorerem -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    
+    <!-- Podpięty mój CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <!-- Nawigacyjny pas na górze strony -->
+        <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+                <div class="container">
+                    <!--Przycisk zamykający i otwierający menu, ale tylko w trybie na telefon -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                     <!-- Logo pomniejszone -->
+                    <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="30"></a>
+                    <div class="collapse navbar-collapse" id="Navbar">
+                        <!--Lista podstron -->
+                        <ul class="navbar-nav mr-auto">
+                                <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Strona główna</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-info fa-lg"></span> Baza noblistów</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Kontakt</a></li>        
+                        </ul>
+                    </div>
+                    
+                </div>
+            </nav>
+            
+   <!--Nagłówek typu jumbotron -->
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <!--Krótki opis -->
+                <div class="col-12 col-sm-6">
+                    <h1>Nobliści z fizyki</h1>
+                    <p>Strona poświęcona Noblistom z fizyki - kompendium wiedzy. Baza Noblistów w rozbudowie.</p>
+                </div>
+                <!--Kolumna z resztą miejsca na obrazek -->
+                <div class="col-12 col-sm align-self-center">
+                    <img src="img/logo.jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+
+      <!--Kontener główny zawierający stronę i treści -->
+    <div class="container">
+        <div class="row">
+            <ol class="col-12 breadcrumb">
+                <!--Breadcrumbs - jak dostałeś się na tę stronę -->
+                <li class="breadcrumb-item"><a href="./index.html">Strona główna</a></li>
+                <li class="breadcrumb-item active">Baza noblistów</li>
+            </ol>
+            <div class="col">
+               <h3>Trochę historii</h3>
+               <hr>
+            </div>
+        </div>
+
+         <!-- Opis -->
+        <div class="row row-content">
+            <div class="col-12 col-sm-6">
+                <h2>Jak to się zaczęło</h2>
+                <p> </p>
+                <p>Przyznawane od 1901 roku wyróżnienie ufundowane zostało przez szwedzkiego przemysłowca, Alfreda Nobla w jego testamencie. Spadkiem fundatora zarządza Fundacja Nobla, która inwestuje środki w taki sposób, by nagroda mogła być przyznawana corocznie. Laureatów nagrody wybiera Królewska Szwedzka Akademia Nauk spośród kandydatów rekomendowanych przez działający przy akademii Komitet Noblowski w dziedzinie fizyki. Komitet składa się z sześciu osób, wybieranych spośród członków akademii na trzyletnie kadencje. Celem gremium jest przeprowadzanie procedury zbierania kandydatur oraz ich wstępna selekcja.</p>
+            </div>
+            <div class="col col-sm">
+                 <!--Karta z informacjami -->
+                <div class="card">
+                    <h3 class="card-header bg-primary text-white">Przyznanie nagrody Nobla</h3>
+                    <div class="card-body">
+                        <dl class="row">
+                            <dt class="col-6">Kiedy?</dt>
+                            <dd class="col-6">co roku 10 grudnia</dd>
+                            <dt class="col-6">Gdzie?</dt>
+                            <dd class="col-6">W budynku sztokholmskiej filharmonii </dd>
+                            <dt class="col-6">Projektant medalu</dt>
+                            <dd class="col-6">Erika Lindberga</dd>
+                            <dt class="col-6">Liczba noblistów z fizyki</dt>
+                            <dd class="col-6">210</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+          <div class="card card-body bg-light">
+               <!--Cytat -->
+            <blockquote class="blockquote">
+                <p class="mb-0">Inventas vitam juvat excoluisse per artes</p>
+                 <!--Stopka cytatu -->
+                <footer class="blockquote-footer">Eneida, księga VI, werset 663.
+                    <cite title="Source Title">
+                            Uczyńmy życie lepszym przez naukę i sztukę
+                    </cite>
+                </footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="row row-content">
+            <div class="col">
+                <h2>Laureaci</h2>
+
+               
+                 <!--Akordeon z informacjami - lista rozwijana -->
+                <div id="accordion">
+                    <!--Kartka 1 -->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="wilhelmhead">
+                                <h3 class="mb-0">
+                                    <a data-toggle="collapse" data-target="#wilhelm">
+                                            Wilhelm Conrad Röntgen  <small>1901</small></h3>
+                                    </a>
+                        </div>
+                            <div role="tabpanel" class="collapse show" id="wilhelm" data-parent="#accordion">        
+                                    <div class="card-body">
+                                            <p class="d-none d-sm-block">„W uznaniu zasług, które oddał przez odkrycie promieni nazwanych jego imieniem”</p>    
+                                    </div>
+                                
+                            </div>
+                    </div>
+                   <!--Kartka 2 -->
+                    <div class="card">
+                            <div class="card-header" role="tab" id="michelsonhead">
+                            <h3 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#michelson">
+                                        Albert Michelson <small>1907</small>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="collapse" id="michelson" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="d-none d-sm-block">„Za jego precyzyjne przyrządy optyczne i spektroskopowe i pomiary metrologiczne przeprowadzone przy ich użyciu”</em></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Kartka 3 -->
+                    <div class="card">
+                            <div class="card-header" role="tab" id="alberthead">
+                            <h3 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#albert">
+                                        Albert Einstein <small>1921</small>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="collapse" id="albert" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="d-none d-sm-block">„Za jego zasługi dla fizyki teoretycznej, a szczególnie za odkrycie praw rządzących efektem fotoelektrycznym”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Kartka 4 -->
+                    <div class="card">
+                            <div class="card-header" role="tab" id="nielshead">
+                            <h3 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#niels">
+                                        Niels Bohr <small>1922</small>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="collapse" id="niels" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="d-none d-sm-block">„Za jego zasługi w badaniach nad strukturą atomu oraz emitowanego przez niego promieniowania”</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Kartka 5 -->
+                    <div class="card">
+                            <div class="card-header" role="tab" id="arthurhead">
+                            <h3 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#arthur">
+                                        Arthur Compton <small>1927</small>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="collapse" id="arthur" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="d-none d-sm-block">„Za odkrycie efektu nazwanego jego imieniem”</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+       </div>
+       <div class="row row-content">
+            <div class="col-12 col-sm-9">
+                <h2>Fakty z ostatnich lat</h2>
+                <!--Tabela -->
+                <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>2018</th>
+                                    <th>2017</th>
+                                    <th>2016</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Liczba nagrodzonych</th>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <th>Przedmiot badań</th>
+                                    <td>topologiczne przejścia fazowe</td>
+                                    <td>fale grawitacyjne</td>
+                                    <td>pulsy optyczne</td>
+                                </tr>
+                                <tr>
+                                    <th>Wygrana (korony szwedzkie)</th>
+                                    <td>9 milionów</td>
+                                    <td>9 milionów</td>
+                                    <td>9 milionów</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+            <div class="col-12 col-sm-3"></div>
+        </div>
+
+    </div>
+
+    <!--Stopka -->
+    <footer class="footer">
+            <div class="container">
+                <div class = "row">             
+                    <div class="col-4 offset-1 col-sm-2">
+                        <!--Linki do podstron -->
+                        <h5>Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="./index.html">Strona główna</a></li>
+                            <li><a href="#">Spis noblistów</a></li>
+                            <li><a href="./contactus.html">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    <!--Informacje o firmie -->
+                    <div class="col-7 col-sm-5">
+                        <h5>Nasza siedziba</h5>
+                        <address>
+                          Wrocław 50-789<br>
+                          ul. Czystajakaś 45/2<br>
+                          Polska<br>
+                          <i class="fa fa-phone fa-lg"></i>: 123 456 789<br>
+                          <i class="fa fa-fax fa-lg"></i>: 003 457 789<br>
+                          <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:fizykanoble@fizyka.net">fizykanoble@fizyka.net</a>
+                       </address>
+                    </div>
+                     <!--Social media -->
+                    <div class="col-12 col-sm-4 align-self-center">
+                        <div class="text-center">
+                            <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
+                            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+                            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+                            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                            <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+                            <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
+                        </div>
+                    </div>
+               </div>
+               <div  class="row justify-content-center">             
+                    <div class="col-auto">
+                        <p>Marta Głowacka - Kurs Kredek</p>
+                    </div>
+               </div>
+            </div>
+        </footer>
+    
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    
+</body>
+
+</html>

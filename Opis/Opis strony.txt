@@ -1,0 +1,7 @@
+Strona o noblistach z fizyki - szablon.
+
+U¿yte technologie:
+
+- Bootstrap
+- JQuery i Java Script (zalecane funkcje)
+- CSS i HTML

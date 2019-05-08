@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <!-- Tytuł strony -->
+    <title>Nobliści z fizyki</title>
+
+    <!-- Kodowanie tekstu -->
+    <meta charset="utf-8">
+
+     <!--Ustawienia początkowe na telefon i kompatybilność z Explorerem -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<!-- Nawigacyjny pas na górze strony -->
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+             <!--Przycisk zamykający i otwierający menu, ale tylko w trybie na telefon -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+             <!-- Logo pomniejszone -->
+            <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="30"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                 <!--Lista podstron -->
+                <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Strona główna</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> Baza noblistów</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Nagłówek typu jumbotron -->
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                 <!--Krótki opis i przycisk subskrypcji -->
+                <div class="col-12 col-sm-6">
+                    <h1>Nobliści z fizyki</h1>
+                    <p>Strona poświęcona Noblistom z fizyki - kompendium wiedzy. Baza Noblistów w rozbudowie.</p>
+                </div>
+                 <!--Kolumna z resztą miejsca na obrazek -->
+                <div class="col-12 col-sm align-self-center">
+                        <img src="img/logo.jpg" class="img-fluid">
+               </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Kontener główny zawierający stronę i treści -->
+    <div class="container">
+        <div class="row">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Strona główna</a></li>
+                <li class="breadcrumb-item active">Kontakt</li>
+            </ol>
+            <div class="col-12">
+               <h3>Kontakt</h3>
+               <hr>
+            </div>
+        </div>
+
+<!--Dane firmy-->
+        <div class="row row-content">
+           <div class="col-12">
+              <h3>Nasza siedziba</h3>
+           </div>
+            <div class="col-12 col-sm-4 offset-sm-1">
+                   <h5>Nasz adres</h5>
+                    <address style="font-size: 100%">
+                            Wrocław 50-789<br>
+                            ul. Czystajakaś 45/2<br>
+                            Polska<br>
+		              <i class="fa fa-phone"></i>Tel. : 123 456 789<br>
+                      <i class="fa fa-fax fa-lg"></i> Fax : 003 457 789<br>
+                      <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:fizykanoble@fizyka.net">fizykanoble@fizyka.net</a>
+		           </address>
+            </div>
+            <!--Smieszny obrazek -->
+            <div class="col-12 col-sm-6 offset-sm-1">
+                <h5>Na pokrzepienie</h5>
+                <img src="./img/einstein.jpg" width="50%"/>
+            </div>
+            <div class="col-12 col-sm-11 offset-sm-1">
+                <!--Grupa przycisków -->
+                <div class="btn-group" role="group">
+                    <!--Metoda Call wywoływana -->
+                    <a role="button" class="btn btn-primary btn-call" onclick="Call()" href="tel:123 456 789"><i class="fa fa-phone " ></i> Zadzwoń</a>
+                    <a role="button" class="btn btn-info"><i class="fa fa-skype"></i> Skype</a>
+                    <a role="button" class="btn btn-success" href="mailto:fizykanoble@fizyka.net"><i class="fa fa-envelope-o"></i>E-mail</a> 
+                </div>
+            </div>
+        </div>
+
+        <!--Feedback -->
+        <div class="row row-content">
+           <div class="col-12">
+              <h3>Daj nam feedback</h3>
+           </div>
+            <div class="col-12 col-md-9">
+                <!--Formularz -->
+                <form>
+                        <div class="form-group row">
+                                <label for="firstname" class="col-md-2 col-form-label">Imię</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Imię">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="lastname" class="col-md-2 col-form-label">Nazwisko</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Nazwisko">
+                                </div>
+                            </div>
+
+                        <div class="form-group row">
+                            <label for="telnum" class="col-12 col-md-2 col-form-label">Telefon</label>   
+                              <div class="col-5 col-md-3">
+                                  <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Kod telefonu">
+                              </div>   
+                              <div class="col-7 col-md-7">
+                                    <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Numer tel.">
+                                </div>   
+                        </div>
+      
+                        <div class="form-group row">
+                            <label for="emailid" class="col-md-2 col-form-label">E-mail  </label>   
+                               <div class="col-md-10">
+                                   <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
+                               </div>                         
+                          </div>
+                          <div class="form-group row">
+                              <div class="col-md-6 offset-md-2">
+                                  <div class="form-check">
+                                      <input type="checkbox" class="form-check-input" name="approve" id="approve" value="">
+                                      <label class="form-check-label" for="approve"><strong>Możemy się z Tobą kontaktować?</strong></label>
+                                  </div>
+                              </div>
+
+                              <div class="col-md-3 offset-md-1">
+                                  <select class="form-control">
+                                      <option>Tel.</option>
+                                      <option>E-mail</option>
+                                  </select>
+                              </div>
+                          </div>
+
+                          <div class="form-group row">
+                                <label for="feedback" class="col-md-2 col-form-label">Twój feedback </label>   
+                                   <div class="col-md-10">
+                                       <textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
+                                   </div>                         
+                         </div>
+                         <div class="form-group row">
+                             <div class="offset-md-2 col-md-10">
+                                 <button type="submit" class="btn btn-primary">Wyślij feedback</button>
+                             </div>
+                         </div>
+                </form>
+            </div>
+             <div class="col-12 col-md">
+            </div>
+       </div>
+
+    </div>
+
+    <!--Stopka -->
+    <footer class="footer">
+            <div class="container">
+                <div class = "row">             
+                    <div class="col-4 offset-1 col-sm-2">
+                        <!--Linki do podstron -->
+                        <h5>Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="./index.html">Strona główna</a></li>
+                            <li><a href="./aboutus.html">Spis noblistów</a></li>
+                            <li><a href="#">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-7 col-sm-5">
+                        <!--Dane firmy -->
+                        <h5>Nasza siedziba</h5>
+                        <address>
+                          Wrocław 50-789<br>
+                          ul. Czystajakaś 45/2<br>
+                          Polska<br>
+                          <i class="fa fa-phone fa-lg"></i>: 123 456 789<br>
+                          <i class="fa fa-fax fa-lg"></i>: 003 457 789<br>
+                          <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:fizykanoble@fizyka.net">fizykanoble@fizyka.net</a>
+                       </address>
+                    </div>
+                    <!--Social media -->
+                    <div class="col-12 col-sm-4 align-self-center">
+                        <div class="text-center">
+                            <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
+                            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+                            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+                            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                            <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+                            <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
+                        </div>
+                    </div>
+               </div>
+               <div  class="row justify-content-center">             
+                    <div class="col-auto">
+                        <p>Marta Głowacka - Kurs Kredek</p>
+                    </div>
+               </div>
+            </div>
+        </footer>
+    
+    <!--Skrypty do działania JQuery  -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    
+</body>
+
+</html>
